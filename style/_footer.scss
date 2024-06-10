@@ -1,0 +1,68 @@
+footer {
+  .container-footer {
+    @include container_box(1110px, 100%, 80px 5px 0 5px, 0 auto);
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: 194px 42px;
+    row-gap: 60px;
+    @media (max-width: 1070px) {
+      grid-template-columns: repeat(2, 1fr);
+      grid-template-rows: 194px 194px 42px;
+      justify-items: center;
+    }
+    @media (max-width: 525px) {
+      grid-template-columns: 255px;
+      grid-template-rows: 194px 194px 194px 194px 42px;
+      justify-content: space-around;
+    }
+    .links {
+      @include container_box(255px, 100%, 0, 0);
+      p {
+        @extend %buttom_text;
+        color: $color_black51;
+        margin-bottom: 9px;
+      }
+    }
+    .payment {
+      @include container_box(255px, 100%, 0, 0);
+      p {
+        @extend %buttom_text;
+        color: $color_black51;
+        margin-bottom: 9px;
+      }
+    }
+    .contacts {
+      @include container_box(255px, 100%, 0, 0);
+      @media (max-width: 1070px) {
+        grid-column-start: 1;
+        grid-column-end: 2;
+      }
+      p {
+        @extend %buttom_text;
+        color: $color_black51;
+        margin-bottom: 9px;
+      }
+    }
+    .social_media {
+      @include container_box(355px, 100%, 0, 0);
+      p {
+        @extend %buttom_text;
+        color: $color_black51;
+        margin-bottom: 9px;
+      }
+    }
+    .information {
+      @include container_box(1000px, 100%, 0, 0);
+      grid-column-start: 1;
+      grid-column-end: 5;
+      @media (max-width: 1070px) {
+        grid-column-start: 1;
+        grid-column-end: 3;
+      }
+      @media (max-width: 525px) {
+        grid-column-start: 1;
+        grid-column-end: 2;
+      }
+    }
+  }
+}

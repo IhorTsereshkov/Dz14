@@ -1,0 +1,958 @@
+@import url("https://db.onlinewebfonts.com/c/0744a43ed7aac352ec78c1404c890d72?family=Gilroy-Light");
+@import url("https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,100..900;1,100..900&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+main .personal_suggestions .container_personal .you_email .email .email_fon label button, header .container_nav nav .nav_right a, header .container_nav nav .nav_left a {
+  font-family: "Gilroy-Light";
+  color: white;
+  font-size: 14px;
+  font-weight: 400;
+}
+
+footer .container-footer .social_media p, footer .container-footer .contacts p, footer .container-footer .payment p, footer .container-footer .links p, main .container_main_middle .blog, header .container_nav button {
+  font-family: "Gilroy-Light";
+  color: white;
+  font-size: 18px;
+  font-weight: 500;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+main .container_main .catalog .watch p, main .container_main .catalog .bracelets p, main .container_main .catalog .cufflinks p, main .container_main .catalog .pendants p, main .container_main .catalog .earrings p, main .container_main .catalog .rings p {
+  font-family: "Gilroy-Light";
+  color: white;
+  font-size: 24px;
+  font-weight: 500;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+main .container_main_middle .logo_tag, main .container_main_middle .pictures_box .pictures_thirt p, main .container_main_middle .pictures_box .pictures_second p, main .container_main_middle .pictures_box .pictures_first p {
+  font-family: "Gilroy-Light";
+  color: white;
+  font-size: 21px;
+  font-weight: 400;
+}
+
+header {
+  background-image: url("../img/header_fon.png");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+header .container_nav {
+  max-width: 1110px;
+  width: 100%;
+  padding: 0 5px;
+  margin: 0 auto;
+}
+header .container_nav nav {
+  margin: 0 auto;
+  padding-top: 25px;
+  display: grid;
+  grid-template-columns: 323px 216px 344px;
+  grid-template-rows: 55px;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 523px;
+}
+@media (max-width: 900px) {
+  header .container_nav nav {
+    grid-template-columns: 50% 50%;
+  }
+}
+header .container_nav nav .nav_left {
+  max-width: 323px;
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(3, auto);
+  align-items: center;
+  justify-content: space-between;
+}
+@media (max-width: 900px) {
+  header .container_nav nav .nav_left {
+    display: none;
+  }
+}
+header .container_nav nav .nav_left a {
+  text-decoration: none;
+}
+header .container_nav nav .logo {
+  max-width: 216px;
+  width: 100%;
+  justify-self: center;
+}
+@media (max-width: 900px) {
+  header .container_nav nav .logo {
+    display: block;
+    justify-self: start;
+    padding-left: 20px;
+  }
+}
+header .container_nav nav .nav_right {
+  max-width: 344px;
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(3, auto);
+  justify-items: center;
+  align-items: center;
+}
+@media (max-width: 900px) {
+  header .container_nav nav .nav_right {
+    display: none;
+  }
+}
+header .container_nav nav .nav_right a {
+  text-decoration: none;
+  justify-self: start;
+  align-self: center;
+}
+header .container_nav nav .nav_right .search {
+  padding-bottom: 10px;
+}
+header .container_nav nav .nav_right .search::before {
+  content: url("../img/search.png");
+  width: 24px;
+  padding-right: 15px;
+  position: relative;
+  top: 7px;
+}
+header .container_nav nav .nav_right .icons_box {
+  display: grid;
+  grid-template-columns: 17px 17px;
+  grid-template-rows: 17px;
+  -moz-column-gap: 26px;
+       column-gap: 26px;
+  justify-items: end;
+}
+header .container_nav nav .menu {
+  display: none;
+}
+@media (max-width: 900px) {
+  header .container_nav nav .menu {
+    display: block;
+    justify-self: end;
+    margin-right: 20px;
+  }
+}
+header .container_nav nav .menu img {
+  transform: scale(2);
+}
+header .container_nav h1 {
+  margin: 0 auto;
+  font-family: "Noto Serif", serif;
+  color: white;
+  font-size: 36px;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 50px;
+}
+header .container_nav button {
+  background-color: rgb(51, 51, 51);
+  display: block;
+  max-width: 275px;
+  width: 100%;
+  padding: 15px 35px;
+  margin: 0 auto;
+  border: 1px white solid;
+  margin-bottom: 77px;
+}
+header .line_header {
+  border: 1px solid rgb(255, 255, 255);
+  margin-bottom: 31px;
+}
+header .container_header {
+  max-width: 1110px;
+  width: 100%;
+  padding: 0;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(6, 175px);
+  justify-content: space-between;
+}
+@media (max-width: 1050px) {
+  header .container_header {
+    grid-template-columns: repeat(5, 175px);
+  }
+}
+@media (max-width: 875px) {
+  header .container_header {
+    grid-template-columns: 50% 50%;
+    justify-items: end;
+  }
+}
+header .container_header .logo_box {
+  max-width: 175px;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  border-right: 1px solid rgb(255, 255, 255);
+  margin-bottom: 30px;
+}
+@media (max-width: 875px) {
+  header .container_header .logo_box {
+    display: none;
+  }
+}
+header .container_header .logo_box:last-child {
+  border-right: 0;
+}
+@media (max-width: 1050px) {
+  header .container_header .logo_box:first-child {
+    display: none;
+  }
+}
+header .container_header .logo_box2 {
+  max-width: 175px;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  border-right: 1px solid rgb(255, 255, 255);
+  margin-bottom: 30px;
+  display: none;
+}
+@media (max-width: 875px) {
+  header .container_header .logo_box2 {
+    display: block;
+  }
+}
+header .container_header .logo_box2:last-child {
+  border-right: 0;
+  justify-self: start;
+  padding-left: 15px;
+}
+
+main .container_main {
+  max-width: 1110px;
+  width: 100%;
+  padding: 100px 5px 0 5px;
+  margin: 0 auto;
+}
+main .container_main .event {
+  max-width: 350px;
+  width: 100%;
+  padding: 0;
+  margin: 0 auto;
+  font-family: "Gilroy-Light";
+  font-size: 21px;
+  font-weight: 400;
+  text-align: center;
+  margin-bottom: 14px;
+}
+main .container_main .beautiful {
+  max-width: 540px;
+  width: 100%;
+  padding: 0;
+  margin: 0 auto;
+  font-family: "Noto Serif", serif;
+  font-size: 30px;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 60px;
+}
+main .container_main .range {
+  display: grid;
+  justify-items: center;
+  grid-template-columns: repeat(6, 1fr);
+  margin-bottom: 55px;
+}
+@media (max-width: 1070px) {
+  main .container_main .range {
+    grid-template-columns: repeat(3, 171px);
+    grid-template-rows: repeat(2, 80px);
+    justify-content: space-evenly;
+  }
+}
+@media (max-width: 550px) {
+  main .container_main .range {
+    grid-template-columns: repeat(2, 171px);
+    grid-template-rows: repeat(3, 80px);
+    justify-content: space-evenly;
+  }
+}
+main .container_main .range .wedding {
+  max-width: 171px;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  min-height: 61px;
+}
+main .container_main .range .wedding button {
+  width: 165px;
+  height: 55px;
+  font-family: "Gilroy-Light";
+  font-size: 18px;
+  font-weight: 500;
+  text-align: center;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  background-color: transparent;
+  border: 1px rgb(214, 214, 214) solid;
+  cursor: pointer;
+  position: relative;
+  z-index: 2;
+}
+main .container_main .range .wedding button:hover {
+  width: 171px;
+  height: 61px;
+  background-color: rgb(51, 51, 51);
+  color: white;
+}
+main .container_main .range .wedding button:after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border: 1px rgb(214, 214, 214) solid;
+  top: 6px;
+  left: 6px;
+  z-index: 1;
+}
+main .container_main .range .wedding button:hover::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border: 1px rgb(214, 214, 214) solid;
+  top: 0px;
+  left: 0px;
+}
+main .container_main .catalog {
+  max-width: 1110px;
+  width: 100%;
+  padding: 0;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(3, 350px);
+  justify-content: space-between;
+  grid-template-rows: repeat(2, 1fr);
+  row-gap: 30px;
+  margin-bottom: 120px;
+}
+@media (max-width: 1070px) {
+  main .container_main .catalog {
+    grid-template-columns: repeat(2, 350px);
+    grid-template-rows: repeat(3, 280px);
+    justify-content: space-evenly;
+  }
+}
+@media (max-width: 720px) {
+  main .container_main .catalog {
+    grid-template-columns: repeat(1, 350px);
+    grid-template-rows: repeat(6, 280px);
+    justify-content: space-evenly;
+  }
+}
+main .container_main .catalog .rings {
+  max-width: 350px;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  min-height: 280px;
+  background-image: url("../img/rings.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  cursor: pointer;
+}
+main .container_main .catalog .rings p {
+  text-align: center;
+  padding-top: 222px;
+}
+main .container_main .catalog .earrings {
+  max-width: 350px;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  min-height: 280px;
+  background-image: url("../img/earrings.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  cursor: pointer;
+}
+main .container_main .catalog .earrings p {
+  text-align: center;
+  padding-top: 222px;
+}
+main .container_main .catalog .pendants {
+  max-width: 350px;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  min-height: 280px;
+  background-image: url("../img/pendants.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  cursor: pointer;
+}
+main .container_main .catalog .pendants p {
+  text-align: center;
+  padding-top: 222px;
+}
+main .container_main .catalog .cufflinks {
+  max-width: 350px;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  min-height: 280px;
+  background-image: url("../img/cufflinks.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  cursor: pointer;
+}
+main .container_main .catalog .cufflinks p {
+  text-align: center;
+  padding-top: 222px;
+}
+main .container_main .catalog .bracelets {
+  max-width: 350px;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  min-height: 280px;
+  background-image: url("../img/bracelets.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  cursor: pointer;
+}
+main .container_main .catalog .bracelets p {
+  text-align: center;
+  padding-top: 222px;
+}
+main .container_main .catalog .watch {
+  max-width: 350px;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  min-height: 280px;
+  background-image: url("../img/watch.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  cursor: pointer;
+}
+main .container_main .catalog .watch p {
+  text-align: center;
+  padding-top: 222px;
+}
+main .salon {
+  background-color: rgb(51, 51, 51);
+  min-height: 540px;
+}
+@media (max-width: 524px) {
+  main .salon {
+    min-height: 630px;
+  }
+}
+main .salon .salon_container {
+  max-width: 1110px;
+  width: 100%;
+  padding: 100px 5px 0 5px;
+  margin: 0 auto;
+}
+main .salon .salon_container .question {
+  font-family: "Gilroy-Light";
+  font-size: 21px;
+  font-weight: 400;
+  color: white;
+  text-align: center;
+  margin-bottom: 14px;
+}
+main .salon .salon_container .salon_moscow {
+  max-width: 540px;
+  width: 100%;
+  padding: 0;
+  margin: 0 auto;
+  font-family: "Noto Serif", serif;
+  font-size: 30px;
+  font-weight: 700;
+  color: white;
+  text-align: center;
+  line-height: 41px;
+  margin-bottom: 45px;
+}
+main .salon .salon_container .salon_text {
+  max-width: 730px;
+  width: 100%;
+  padding: 0;
+  margin: 0 auto;
+  font-family: "Gilroy-Light";
+  font-size: 18px;
+  font-weight: 400;
+  color: white;
+  text-align: center;
+  line-height: 26px;
+  margin-bottom: 60px;
+}
+main .salon .salon_container button {
+  display: block;
+  max-width: 224px;
+  width: 100%;
+  padding: 15px auto;
+  margin: 0 auto;
+  height: 54px;
+  font-family: "Gilroy-Light";
+  font-size: 18px;
+  font-weight: 500;
+  letter-spacing: 1px;
+  color: rgb(51, 51, 51);
+  text-transform: uppercase;
+}
+main .container_main_middle {
+  max-width: 1110px;
+  width: 100%;
+  padding: 120px 5px 0 5px;
+  margin: 0 auto;
+}
+main .container_main_middle .useful_articles {
+  font-family: "Gilroy-Light";
+  color: rgb(51, 51, 51);
+  font-size: 21px;
+  font-weight: 400;
+  letter-spacing: 0;
+  text-align: center;
+  margin-bottom: 14px;
+}
+main .container_main_middle .present {
+  max-width: 1000px;
+  width: 100%;
+  padding: 0;
+  margin: 0 auto;
+  font-family: "Noto Serif", serif;
+  font-size: 30px;
+  font-weight: 700;
+  color: rgb(51, 51, 51);
+  text-align: center;
+  line-height: 41px;
+  margin-bottom: 45px;
+}
+main .container_main_middle .pictures_box {
+  max-width: 1110px;
+  width: 100%;
+  padding: 0;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(3, 350px);
+  justify-content: space-between;
+  margin-bottom: 60px;
+}
+@media (max-width: 1070px) {
+  main .container_main_middle .pictures_box {
+    grid-template-columns: repeat(2, 350px);
+    grid-template-rows: 370px 370px;
+    justify-content: space-evenly;
+    row-gap: 20px;
+  }
+}
+@media (max-width: 735px) {
+  main .container_main_middle .pictures_box {
+    grid-template-columns: 350px;
+    grid-template-rows: 370px 370px 370px;
+    justify-content: space-evenly;
+    row-gap: 20px;
+  }
+}
+main .container_main_middle .pictures_box .pictures_first {
+  width: 350px;
+  height: 370px;
+  background-image: url(../img/watch_wife.png);
+  cursor: pointer;
+}
+main .container_main_middle .pictures_box .pictures_first p {
+  max-width: 157px;
+  width: 100%;
+  padding: 248px 0 0 0;
+  margin: 0 auto;
+  text-align: center;
+}
+main .container_main_middle .pictures_box .pictures_second {
+  width: 350px;
+  height: 370px;
+  background-image: url(../img/prendats_ruls.png);
+  cursor: pointer;
+}
+main .container_main_middle .pictures_box .pictures_second p {
+  max-width: 207px;
+  width: 100%;
+  padding: 248px 0 0 0;
+  margin: 0 auto;
+  text-align: center;
+}
+main .container_main_middle .pictures_box .pictures_thirt {
+  width: 350px;
+  height: 370px;
+  background-image: url(../img/newlywed_rings.png);
+  cursor: pointer;
+}
+main .container_main_middle .pictures_box .pictures_thirt p {
+  max-width: 209px;
+  width: 100%;
+  padding: 248px 0 0 0;
+  margin: 0 auto;
+  text-align: center;
+}
+main .container_main_middle .blog {
+  display: block;
+  max-width: 265px;
+  width: 100%;
+  padding: 15px 35px;
+  margin: 0 auto;
+  background-color: rgb(51, 51, 51);
+  margin-bottom: 117px;
+}
+main .container_main_middle .logo_tag {
+  text-align: center;
+  margin-bottom: 15px;
+  color: rgb(51, 51, 51);
+}
+main .container_main_middle .social {
+  font-family: "Noto Serif", serif;
+  font-size: 30px;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 60px;
+  color: rgb(51, 51, 51);
+}
+main .container_main_middle .social_pictures {
+  max-width: 1110px;
+  width: 100%;
+  padding: 0;
+  margin: 0 auto;
+  margin-bottom: 150px;
+  display: grid;
+  grid-template-columns: repeat(4, 275px);
+  grid-template-rows: repeat(2, 300px);
+  grid-template-areas: "one one two three" "four five six six";
+}
+@media (max-width: 1115px) {
+  main .container_main_middle .social_pictures {
+    max-width: 550px;
+    width: 100%;
+    padding: 0;
+    margin: 0 auto;
+    grid-template-columns: repeat(2, 275px);
+    margin-bottom: 150px;
+    grid-template-rows: repeat(4, 300px);
+    grid-template-areas: "one one" "two three" "four five" "six six";
+  }
+}
+@media (max-width: 670px) {
+  main .container_main_middle .social_pictures {
+    max-width: 360px;
+    width: 100%;
+    padding: 0;
+    margin: 0 auto;
+    margin-bottom: 150px;
+    grid-template-columns: repeat(2, 175px);
+    grid-template-rows: repeat(4, 187px);
+    grid-template-areas: "one one" "two three" "four five" "six six";
+  }
+}
+main .container_main_middle .picture1 {
+  grid-area: one;
+  cursor: pointer;
+}
+@media (max-width: 670px) {
+  main .container_main_middle .picture1 {
+    width: 350px;
+  }
+}
+main .container_main_middle .picture2 {
+  grid-area: two;
+  cursor: pointer;
+}
+@media (max-width: 670px) {
+  main .container_main_middle .picture2 {
+    width: 175px;
+  }
+}
+main .container_main_middle .picture3 {
+  grid-area: three;
+  cursor: pointer;
+}
+@media (max-width: 670px) {
+  main .container_main_middle .picture3 {
+    width: 175px;
+  }
+}
+main .container_main_middle .picture4 {
+  grid-area: four;
+  cursor: pointer;
+}
+@media (max-width: 670px) {
+  main .container_main_middle .picture4 {
+    width: 175px;
+  }
+}
+main .container_main_middle .picture5 {
+  grid-area: five;
+  cursor: pointer;
+}
+@media (max-width: 670px) {
+  main .container_main_middle .picture5 {
+    width: 175px;
+  }
+}
+main .container_main_middle .picture6 {
+  grid-area: six;
+  cursor: pointer;
+}
+@media (max-width: 670px) {
+  main .container_main_middle .picture6 {
+    width: 350px;
+  }
+}
+main .personal_suggestions {
+  background-color: rgb(51, 51, 51);
+  min-height: 478px;
+}
+main .personal_suggestions .container_personal {
+  max-width: 1110px;
+  width: 100%;
+  padding: 100px 5px 0 5px;
+  margin: 0 auto;
+}
+main .personal_suggestions .container_personal .personal {
+  font-family: "Gilroy-Light";
+  font-size: 21px;
+  font-weight: 400;
+  color: white;
+  text-align: center;
+  margin-bottom: 14px;
+}
+main .personal_suggestions .container_personal .exclusive {
+  max-width: 540px;
+  width: 100%;
+  padding: 0;
+  margin: 0 auto;
+  font-family: "Noto Serif", serif;
+  font-size: 30px;
+  font-weight: 700;
+  color: white;
+  text-align: center;
+  line-height: 41px;
+  margin-bottom: 63px;
+}
+main .personal_suggestions .container_personal .you_email {
+  max-width: 773px;
+  width: 100%;
+  padding: 0;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 270px 503px;
+  justify-content: space-between;
+  align-items: center;
+}
+@media (max-width: 780px) {
+  main .personal_suggestions .container_personal .you_email {
+    grid-template-columns: 1fr;
+    grid-template-rows: 110px 130px;
+    justify-content: space-between;
+    row-gap: 30px;
+    justify-items: center;
+  }
+}
+main .personal_suggestions .container_personal .you_email .your_manager {
+  max-width: 269px;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  grid-template-columns: 269px;
+  grid-template-rows: repeat(3, 26px);
+  row-gap: 14px;
+}
+main .personal_suggestions .container_personal .you_email .your_manager p {
+  font-family: "Gilroy-Light";
+  color: white;
+  font-size: 18px;
+  font-weight: 500;
+  letter-spacing: 1px;
+}
+main .personal_suggestions .container_personal .you_email .your_manager p:before {
+  content: url("../img/arrow.png");
+  margin-right: 20px;
+}
+main .personal_suggestions .container_personal .you_email .email {
+  max-width: 448px;
+  width: 100%;
+  padding: 14px 15px;
+  margin: 0;
+  border: 1px white solid;
+  min-height: 113px;
+  justify-self: end;
+}
+@media (max-width: 780px) {
+  main .personal_suggestions .container_personal .you_email .email {
+    margin: 0 auto;
+  }
+}
+main .personal_suggestions .container_personal .you_email .email .email_fon {
+  background-color: white;
+  max-width: 418px;
+  width: 100%;
+  padding: 20px 17px 20px 22px;
+  margin: 0;
+  min-height: 85px;
+}
+@media (max-width: 460px) {
+  main .personal_suggestions .container_personal .you_email .email .email_fon form {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 45px;
+    justify-items: end;
+  }
+}
+main .personal_suggestions .container_personal .you_email .email .email_fon form input {
+  max-width: 200px;
+  width: 100%;
+  padding: 14px 15px;
+  margin: 0;
+  min-height: 45px;
+  border: 1px solid rgb(214, 214, 214);
+}
+@media (max-width: 460px) {
+  main .personal_suggestions .container_personal .you_email .email .email_fon form input {
+    max-width: 170px;
+  }
+}
+main .personal_suggestions .container_personal .you_email .email .email_fon input::-moz-placeholder {
+  color: rgba(51, 51, 51, 0.5);
+  font-family: "Gilroy-Light";
+  font-size: 14px;
+  font-weight: 500;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+main .personal_suggestions .container_personal .you_email .email .email_fon input::placeholder {
+  color: rgba(51, 51, 51, 0.5);
+  font-family: "Gilroy-Light";
+  font-size: 14px;
+  font-weight: 500;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+main .personal_suggestions .container_personal .you_email .email .email_fon :focus::-moz-placeholder {
+  color: transparent;
+}
+main .personal_suggestions .container_personal .you_email .email .email_fon :focus::placeholder {
+  color: transparent;
+}
+main .personal_suggestions .container_personal .you_email .email .email_fon input:focus {
+  outline: none;
+}
+main .personal_suggestions .container_personal .you_email .email .email_fon label button {
+  max-width: 164px;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  min-height: 45px;
+  margin-left: 9px;
+  background-color: rgb(51, 51, 51);
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+@media (max-width: 460px) {
+  main .personal_suggestions .container_personal .you_email .email .email_fon label button {
+    max-width: 130px;
+  }
+}
+
+footer .container-footer {
+  max-width: 1110px;
+  width: 100%;
+  padding: 80px 5px 0 5px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: 194px 42px;
+  row-gap: 60px;
+}
+@media (max-width: 1070px) {
+  footer .container-footer {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 194px 194px 42px;
+    justify-items: center;
+  }
+}
+@media (max-width: 525px) {
+  footer .container-footer {
+    grid-template-columns: 255px;
+    grid-template-rows: 194px 194px 194px 194px 42px;
+    justify-content: space-around;
+  }
+}
+footer .container-footer .links {
+  max-width: 255px;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+}
+footer .container-footer .links p {
+  color: rgb(51, 51, 51);
+  margin-bottom: 9px;
+}
+footer .container-footer .payment {
+  max-width: 255px;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+}
+footer .container-footer .payment p {
+  color: rgb(51, 51, 51);
+  margin-bottom: 9px;
+}
+footer .container-footer .contacts {
+  max-width: 255px;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+}
+@media (max-width: 1070px) {
+  footer .container-footer .contacts {
+    grid-column-start: 1;
+    grid-column-end: 2;
+  }
+}
+footer .container-footer .contacts p {
+  color: rgb(51, 51, 51);
+  margin-bottom: 9px;
+}
+footer .container-footer .social_media {
+  max-width: 355px;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+}
+footer .container-footer .social_media p {
+  color: rgb(51, 51, 51);
+  margin-bottom: 9px;
+}
+footer .container-footer .information {
+  max-width: 1000px;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  grid-column-start: 1;
+  grid-column-end: 5;
+}
+@media (max-width: 1070px) {
+  footer .container-footer .information {
+    grid-column-start: 1;
+    grid-column-end: 3;
+  }
+}
+@media (max-width: 525px) {
+  footer .container-footer .information {
+    grid-column-start: 1;
+    grid-column-end: 2;
+  }
+}/*# sourceMappingURL=style.css.map */

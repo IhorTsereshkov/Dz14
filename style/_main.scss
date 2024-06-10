@@ -1,0 +1,501 @@
+main {
+  .container_main {
+    @include container_box(1110px, 100%, 100px 5px 0 5px, 0 auto);
+    .event {
+      @include container_box(350px, 100%, 0, 0 auto);
+      font-family: $font_gilroy;
+      font-size: 21px;
+      font-weight: 400;
+      text-align: center;
+      margin-bottom: 14px;
+    }
+    .beautiful {
+      @include container_box(540px, 100%, 0, 0 auto);
+      font-family: $font_serif;
+      font-size: 30px;
+      font-weight: 700;
+      text-align: center;
+      margin-bottom: 60px;
+    }
+    .range {
+      display: grid;
+      justify-items: center;
+      grid-template-columns: repeat(6, 1fr);
+      margin-bottom: 55px;
+      @media (max-width: 1070px) {
+        grid-template-columns: repeat(3, 171px);
+        grid-template-rows: repeat(2, 80px);
+        justify-content: space-evenly;
+      }
+      @media (max-width: 550px) {
+        grid-template-columns: repeat(2, 171px);
+        grid-template-rows: repeat(3, 80px);
+        justify-content: space-evenly;
+      }
+      .wedding {
+        @include container_box(171px, 100%, 0, 0);
+        min-height: 61px;
+        button {
+          width: 165px;
+          height: 55px;
+          font-family: $font_gilroy;
+          font-size: 18px;
+          font-weight: 500;
+          text-align: center;
+          letter-spacing: 1px;
+          text-transform: uppercase;
+          background-color: transparent;
+          border: 1px $color_grey solid;
+          cursor: pointer;
+          position: relative;
+          z-index: 2;
+        }
+        button:hover {
+          width: 171px;
+          height: 61px;
+          background-color: rgb(51, 51, 51);
+          color: $color_white;
+        }
+        button:after {
+          content: "";
+          position: absolute;
+          width: 100%;
+          height: 100%;
+          border: 1px $color_grey solid;
+          top: 6px;
+          left: 6px;
+          z-index: 1;
+        }
+        button:hover::after {
+          content: "";
+          position: absolute;
+          width: 100%;
+          height: 100%;
+          border: 1px $color_grey solid;
+          top: 0px;
+          left: 0px;
+        }
+      }
+    }
+    .catalog {
+      @include container_box(1110px, 100%, 0, 0 auto);
+      display: grid;
+      grid-template-columns: repeat(3, 350px);
+      justify-content: space-between;
+      grid-template-rows: repeat(2, 1fr);
+      row-gap: 30px;
+      margin-bottom: 120px;
+      @media (max-width: 1070px) {
+        grid-template-columns: repeat(2, 350px);
+        grid-template-rows: repeat(3, 280px);
+        justify-content: space-evenly;
+      }
+      @media (max-width: 720px) {
+        grid-template-columns: repeat(1, 350px);
+        grid-template-rows: repeat(6, 280px);
+        justify-content: space-evenly;
+      }
+      .rings {
+        @include container_box(350px, 100%, 0, 0);
+        min-height: 280px;
+        background-image: url("../img/rings.png");
+        @include catalog_box(center, no-repeat, cover);
+        cursor: pointer;
+        p {
+          @extend %catalog_text;
+          text-align: center;
+          padding-top: 222px;
+        }
+      }
+      .earrings {
+        @include container_box(350px, 100%, 0, 0);
+        min-height: 280px;
+        background-image: url("../img/earrings.png");
+        @include catalog_box(center, no-repeat, cover);
+        cursor: pointer;
+        p {
+          @extend %catalog_text;
+          text-align: center;
+          padding-top: 222px;
+        }
+      }
+      .pendants {
+        @include container_box(350px, 100%, 0, 0);
+        min-height: 280px;
+        background-image: url("../img/pendants.png");
+        @include catalog_box(center, no-repeat, cover);
+        cursor: pointer;
+        p {
+          @extend %catalog_text;
+          text-align: center;
+          padding-top: 222px;
+        }
+      }
+      .cufflinks {
+        @include container_box(350px, 100%, 0, 0);
+        min-height: 280px;
+        background-image: url("../img/cufflinks.png");
+        @include catalog_box(center, no-repeat, cover);
+        cursor: pointer;
+        p {
+          @extend %catalog_text;
+          text-align: center;
+          padding-top: 222px;
+        }
+      }
+      .bracelets {
+        @include container_box(350px, 100%, 0, 0);
+        min-height: 280px;
+        background-image: url("../img/bracelets.png");
+        @include catalog_box(center, no-repeat, cover);
+        cursor: pointer;
+        p {
+          @extend %catalog_text;
+          text-align: center;
+          padding-top: 222px;
+        }
+      }
+      .watch {
+        @include container_box(350px, 100%, 0, 0);
+        min-height: 280px;
+        background-image: url("../img/watch.png");
+        @include catalog_box(center, no-repeat, cover);
+        cursor: pointer;
+        p {
+          @extend %catalog_text;
+          text-align: center;
+          padding-top: 222px;
+        }
+      }
+    }
+  }
+  .salon {
+    background-color: rgba(51, 51, 51, 1);
+    min-height: 540px;
+    @media (max-width: 524px) {
+      min-height: 630px;
+    }
+    .salon_container {
+      @include container_box(1110px, 100%, 100px 5px 0 5px, 0 auto);
+      .question {
+        font-family: $font_gilroy;
+        font-size: 21px;
+        font-weight: 400;
+        color: $color_white;
+        text-align: center;
+        margin-bottom: 14px;
+      }
+      .salon_moscow {
+        @include container_box(540px, 100%, 0, 0 auto);
+        font-family: $font_serif;
+        font-size: 30px;
+        font-weight: 700;
+        color: $color_white;
+        text-align: center;
+        line-height: 41px;
+        margin-bottom: 45px;
+      }
+      .salon_text {
+        @include container_box(730px, 100%, 0, 0 auto);
+        font-family: $font_gilroy;
+        font-size: 18px;
+        font-weight: 400;
+        color: $color_white;
+        text-align: center;
+        line-height: 26px;
+        margin-bottom: 60px;
+      }
+      button {
+        display: block;
+        @include container_box(224px, 100%, 15px auto, 0 auto);
+        height: 54px;
+        font-family: $font_gilroy;
+        font-size: 18px;
+        font-weight: 500;
+        letter-spacing: 1px;
+        color: rgba(51, 51, 51, 1);
+        text-transform: uppercase;
+      }
+    }
+  }
+  .container_main_middle {
+    @include container_box(1110px, 100%, 120px 5px 0 5px, 0 auto);
+    .useful_articles {
+      @include text_box($font_gilroy, $color_black51, 21px, 400, 0);
+      text-align: center;
+      margin-bottom: 14px;
+    }
+    .present {
+      @include container_box(1000px, 100%, 0, 0 auto);
+      font-family: $font_serif;
+      font-size: 30px;
+      font-weight: 700;
+      color: $color_black51;
+      text-align: center;
+      line-height: 41px;
+      margin-bottom: 45px;
+    }
+    .pictures_box {
+      @include container_box(1110px, 100%, 0, 0 auto);
+      display: grid;
+      grid-template-columns: repeat(3, 350px);
+      justify-content: space-between;
+      margin-bottom: 60px;
+      @media (max-width: 1070px) {
+        grid-template-columns: repeat(2, 350px);
+        grid-template-rows: 370px 370px;
+        justify-content: space-evenly;
+        row-gap: 20px;
+      }
+      @media (max-width: 735px) {
+        grid-template-columns: 350px;
+        grid-template-rows: 370px 370px 370px;
+        justify-content: space-evenly;
+        row-gap: 20px;
+      }
+      .pictures_first {
+        width: 350px;
+        height: 370px;
+        background-image: url(../img/watch_wife.png);
+        cursor: pointer;
+        p {
+          @extend %articles_text;
+          @include container_box(157px, 100%, 248px 0 0 0, 0 auto);
+          text-align: center;
+        }
+      }
+      .pictures_second {
+        width: 350px;
+        height: 370px;
+        background-image: url(../img/prendats_ruls.png);
+        cursor: pointer;
+        p {
+          @extend %articles_text;
+          @include container_box(207px, 100%, 248px 0 0 0, 0 auto);
+          text-align: center;
+        }
+      }
+      .pictures_thirt {
+        width: 350px;
+        height: 370px;
+        background-image: url(../img/newlywed_rings.png);
+        cursor: pointer;
+        p {
+          @extend %articles_text;
+          @include container_box(209px, 100%, 248px 0 0 0, 0 auto);
+          text-align: center;
+        }
+      }
+    }
+    .blog {
+      display: block;
+      @include container_box(265px, 100%, 15px 35px, 0 auto);
+      background-color: $color_black51;
+      @extend %buttom_text;
+      margin-bottom: 117px;
+    }
+    .logo_tag {
+      @extend %articles_text;
+      text-align: center;
+      margin-bottom: 15px;
+      color: $color_black51;
+    }
+    .social {
+      font-family: $font_serif;
+      font-size: 30px;
+      font-weight: 700;
+      text-align: center;
+      margin-bottom: 60px;
+      color: $color_black51;
+    }
+    .social_pictures {
+      @include container_box(1110px, 100%, 0, 0 auto);
+      margin-bottom: 150px;
+      display: grid;
+      grid-template-columns: repeat(4, 275px);
+      grid-template-rows: repeat(2, 300px);
+      grid-template-areas:
+        "one one two three"
+        "four five six six";
+      @media (max-width: 1115px) {
+        @include container_box(550px, 100%, 0, 0 auto);
+        grid-template-columns: repeat(2, 275px);
+        margin-bottom: 150px;
+        grid-template-rows: repeat(4, 300px);
+        grid-template-areas:
+          "one one"
+          "two three"
+          "four five"
+          "six six";
+      }
+      @media (max-width: 670px) {
+        @include container_box(360px, 100%, 0, 0 auto);
+        margin-bottom: 150px;
+        grid-template-columns: repeat(2, 175px);
+        grid-template-rows: repeat(4, 187px);
+        grid-template-areas:
+          "one one"
+          "two three"
+          "four five"
+          "six six";
+      }
+    }
+    .picture1 {
+      grid-area: one;
+      cursor: pointer;
+      @media (max-width: 670px) {
+        width: 350px;
+      }
+    }
+    .picture2 {
+      grid-area: two;
+      cursor: pointer;
+      @media (max-width: 670px) {
+        width: 175px;
+      }
+    }
+    .picture3 {
+      grid-area: three;
+      cursor: pointer;
+      @media (max-width: 670px) {
+        width: 175px;
+      }
+    }
+    .picture4 {
+      grid-area: four;
+      cursor: pointer;
+      @media (max-width: 670px) {
+        width: 175px;
+      }
+    }
+    .picture5 {
+      grid-area: five;
+      cursor: pointer;
+      @media (max-width: 670px) {
+        width: 175px;
+      }
+    }
+    .picture6 {
+      grid-area: six;
+      cursor: pointer;
+      @media (max-width: 670px) {
+        width: 350px;
+      }
+    }
+  }
+  .personal_suggestions {
+    background-color: $color_black51;
+    min-height: 478px;
+    .container_personal {
+      @include container_box(1110px, 100%, 100px 5px 0 5px, 0 auto);
+      .personal {
+        font-family: $font_gilroy;
+        font-size: 21px;
+        font-weight: 400;
+        color: $color_white;
+        text-align: center;
+        margin-bottom: 14px;
+      }
+      .exclusive {
+        @include container_box(540px, 100%, 0, 0 auto);
+        font-family: $font_serif;
+        font-size: 30px;
+        font-weight: 700;
+        color: $color_white;
+        text-align: center;
+        line-height: 41px;
+        margin-bottom: 63px;
+      }
+      .you_email {
+        @include container_box(773px, 100%, 0, 0 auto);
+        display: grid;
+        grid-template-columns: 270px 503px;
+        justify-content: space-between;
+        align-items: center;
+        @media (max-width: 780px) {
+          grid-template-columns: 1fr;
+          grid-template-rows: 110px 130px;
+          justify-content: space-between;
+          row-gap: 30px;
+          justify-items: center;
+        }
+        .your_manager {
+          @include container_box(269px, 100%, 0, 0);
+          display: grid;
+          grid-template-columns: 269px;
+          grid-template-rows: repeat(3, 26px);
+          row-gap: 14px;
+          p {
+            font-family: $font_gilroy;
+            color: $color_white;
+            font-size: 18px;
+            font-weight: 500;
+            letter-spacing: 1px;
+          }
+          p:before {
+            content: url("../img/arrow.png");
+            margin-right: 20px;
+          }
+        }
+        .email {
+          @include container_box(448px, 100%, 14px 15px, 0);
+          border: 1px $color_white solid;
+          min-height: 113px;
+          justify-self: end;
+          @media (max-width: 780px) {
+            margin: 0 auto;
+          }
+          .email_fon {
+            background-color: $color_white;
+            @include container_box(418px, 100%, 20px 17px 20px 22px, 0);
+            min-height: 85px;
+            form {
+              @media (max-width: 460px) {
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                grid-template-rows: 45px;
+                justify-items: end;
+              }
+              input {
+                @include container_box(200px, 100%, 14px 15px, 0);
+                min-height: 45px;
+                border: 1px solid rgba(214, 214, 214, 1);
+                @media (max-width: 460px) {
+                  max-width: 170px;
+                }
+              }
+            }
+            input::placeholder {
+              color: rgba(51, 51, 51, 0.5);
+              font-family: $font_gilroy;
+              font-size: 14px;
+              font-weight: 500;
+              letter-spacing: 1px;
+              text-transform: uppercase;
+            }
+            :focus::placeholder {
+              color: transparent;
+            }
+            input:focus {
+              outline: none;
+            }
+            label {
+              button {
+                @include container_box(164px, 100%, 0, 0);
+                min-height: 45px;
+                margin-left: 9px;
+                background-color: $color_black51;
+                @extend %nav_text;
+                letter-spacing: 1px;
+                text-transform: uppercase;
+                @media (max-width: 460px) {
+                  max-width: 130px;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
