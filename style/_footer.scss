@@ -22,6 +22,20 @@ footer {
         color: $color_black51;
         margin-bottom: 9px;
       }
+      hr {
+        color: $color_black51;
+      }
+      .links_contents {
+        @include container_box(255px, 100%, 31px 0 0 0, 0);
+        min-height: 160px;
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(4, 1fr);
+        a {
+          text-decoration: none;
+          @extend %footer_text;
+        }
+      }
     }
     .payment {
       @include container_box(255px, 100%, 0, 0);
@@ -29,6 +43,26 @@ footer {
         @extend %buttom_text;
         color: $color_black51;
         margin-bottom: 9px;
+      }
+      hr {
+        color: $color_black51;
+      }
+      .links_contents {
+        @include container_box(255px, 100%, 31px 0 0 0, 0);
+        min-height: 160px;
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(2, 1fr);
+        .links_text {
+          @extend %footer_text;
+          text-transform: none;
+          margin-bottom: 0;
+        }
+      }
+      div {
+        img {
+          @include container_box(55px, 100%, 21px 20px 0 0, 0);
+        }
       }
     }
     .contacts {
@@ -42,6 +76,36 @@ footer {
         color: $color_black51;
         margin-bottom: 9px;
       }
+      hr {
+        color: $color_black51;
+      }
+      .contacts_box {
+        @include container_box(255px, 100%, 31px 0 0 0, 0);
+        min-height: 130px;
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(3, 1fr);
+        .contacts_phone {
+          @extend %footer_text;
+          text-decoration: none;
+        }
+        .contacts_phone::before {
+          content: url("../img/phone.png");
+          position: relative;
+          top: 4px;
+          margin-right: 21px;
+        }
+        .contacts_mail {
+          @extend %footer_text;
+          text-decoration: none;
+        }
+        .contacts_mail::before {
+          content: url("../img/entypo_mail.png");
+          position: relative;
+          top: 4px;
+          margin-right: 21px;
+        }
+      }
     }
     .social_media {
       @include container_box(355px, 100%, 0, 0);
@@ -50,9 +114,34 @@ footer {
         color: $color_black51;
         margin-bottom: 9px;
       }
+      hr {
+        color: $color_black51;
+      }
+      .links_contents {
+        @include container_box(255px, 100%, 31px 0 0 0, 0);
+        min-height: 160px;
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(2, 1fr);
+        .links_text {
+          @extend %footer_text;
+          text-transform: none;
+          margin-bottom: 0;
+        }
+      }
+      div {
+        display: grid;
+        grid-template-columns: repeat(5, 27px);
+        grid-template-rows: 24px;
+        justify-content: space-between;
+        align-items: center;
+        img {
+          @include container_box(24px, 100%, 0, 0);
+        }
+      }
     }
     .information {
-      @include container_box(1000px, 100%, 0, 0);
+      @include container_box(1100px, 100%, 0, 0);
       grid-column-start: 1;
       grid-column-end: 5;
       @media (max-width: 1070px) {
@@ -62,6 +151,45 @@ footer {
       @media (max-width: 525px) {
         grid-column-start: 1;
         grid-column-end: 2;
+      }
+      .information_box {
+        padding-top: 21px;
+        display: grid;
+        grid-template-columns: 145px 195px 95px 140px;
+        grid-template-rows: 23px;
+        justify-content: space-between;
+        @media (max-width: 600px) {
+          grid-template-columns: 145px 195px;
+          grid-template-rows: 23px 23px;
+          row-gap: 10px;
+          justify-content: space-around;
+        }
+        @media (max-width: 525px) {
+          grid-template-columns: 195px;
+          grid-template-rows: repeat(4, 23px);
+          row-gap: 5px;
+          justify-content: space-around;
+        }
+        .jewelry_footer {
+          @include container_box(145px, 100%, 0, 0);
+          @extend %footer_text;
+          margin-bottom: 0;
+        }
+        .contract_footer {
+          @include container_box(195px, 100%, 0, 0);
+          @extend %footer_text;
+          margin-bottom: 0;
+        }
+        .contragent {
+          @include container_box(95px, 100%, 0, 0);
+          @extend %footer_text;
+          margin-bottom: 0;
+        }
+        .figma_info {
+          @include container_box(140px, 100%, 0, 0);
+          @extend %footer_text;
+          margin-bottom: 0;
+        }
       }
     }
   }

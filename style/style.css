@@ -1,3 +1,4 @@
+@charset "UTF-8";
 @import url("https://db.onlinewebfonts.com/c/0744a43ed7aac352ec78c1404c890d72?family=Gilroy-Light");
 @import url("https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,100..900;1,100..900&display=swap");
 * {
@@ -11,6 +12,15 @@ main .personal_suggestions .container_personal .you_email .email .email_fon labe
   color: white;
   font-size: 14px;
   font-weight: 400;
+}
+
+footer .container-footer .information .information_box .figma_info, footer .container-footer .information .information_box .contragent, footer .container-footer .information .information_box .contract_footer, footer .container-footer .information .information_box .jewelry_footer, footer .container-footer .social_media .links_contents .links_text, footer .container-footer .contacts .contacts_box .contacts_mail, footer .container-footer .contacts .contacts_box .contacts_phone, footer .container-footer .payment .links_contents .links_text, footer .container-footer .links .links_contents a {
+  font-family: "Gilroy-Light";
+  color: rgb(51, 51, 51);
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 21px;
+  letter-spacing: 0px;
 }
 
 footer .container-footer .social_media p, footer .container-footer .contacts p, footer .container-footer .payment p, footer .container-footer .links p, main .container_main_middle .blog, header .container_nav button {
@@ -160,6 +170,7 @@ header .container_nav button {
   margin: 0 auto;
   border: 1px white solid;
   margin-bottom: 77px;
+  cursor: pointer;
 }
 header .line_header {
   border: 1px solid rgb(255, 255, 255);
@@ -171,8 +182,9 @@ header .container_header {
   padding: 0;
   margin: 0 auto;
   display: grid;
-  grid-template-columns: repeat(6, 175px);
-  justify-content: space-between;
+  grid-template-columns: repeat(6, 1fr);
+  justify-items: end;
+  justify-content: space-around;
 }
 @media (max-width: 1050px) {
   header .container_header {
@@ -181,7 +193,7 @@ header .container_header {
 }
 @media (max-width: 875px) {
   header .container_header {
-    grid-template-columns: 50% 50%;
+    grid-template-columns: 1fr 1fr;
     justify-items: end;
   }
 }
@@ -198,8 +210,17 @@ header .container_header .logo_box {
     display: none;
   }
 }
-header .container_header .logo_box:last-child {
-  border-right: 0;
+header .container_header .logo_box1 {
+  max-width: 175px;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  margin-bottom: 30px;
+}
+@media (max-width: 875px) {
+  header .container_header .logo_box1 {
+    display: none;
+  }
 }
 @media (max-width: 1050px) {
   header .container_header .logo_box:first-child {
@@ -222,20 +243,24 @@ header .container_header .logo_box2 {
 }
 header .container_header .logo_box2:last-child {
   border-right: 0;
-  justify-self: start;
-  padding-left: 15px;
+}
+@media (max-width: 875px) {
+  header .container_header .logo_box2:last-child {
+    justify-self: start;
+    padding-left: 15px;
+  }
 }
 
 main .container_main {
   max-width: 1110px;
   width: 100%;
-  padding: 100px 5px 0 5px;
+  padding: 0 5px;
   margin: 0 auto;
 }
 main .container_main .event {
   max-width: 350px;
   width: 100%;
-  padding: 0;
+  padding: 100px 0 0 0;
   margin: 0 auto;
   font-family: "Gilroy-Light";
   font-size: 21px;
@@ -274,12 +299,71 @@ main .container_main .range {
     justify-content: space-evenly;
   }
 }
+main .container_main .range .box_1 {
+  max-width: 171px;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  min-height: 61px;
+  position: relative;
+}
+main .container_main .range .box_1 .box_2 {
+  width: 165px;
+  height: 55px;
+  font-family: "Gilroy-Light";
+  font-size: 18px;
+  font-weight: 500;
+  text-align: center;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  background-color: rgb(249, 249, 249);
+  border: 1px rgb(214, 214, 214) solid;
+  cursor: pointer;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  z-index: 1;
+}
+main .container_main .range .box_1 .box_2 a {
+  display: block;
+  font-family: "Gilroy-Light";
+  font-size: 18px;
+  font-weight: 500;
+  text-align: center;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: rgb(51, 51, 51);
+  width: 165px;
+  height: 55px;
+  padding-top: 17px;
+}
+main .container_main .range .box_1 .box_2 a:hover {
+  color: white;
+}
+main .container_main .range .box_1 .box_2:hover {
+  width: 171px;
+  height: 61px;
+  background-color: rgb(51, 51, 51);
+}
+main .container_main .range .box_1 .box_3 {
+  width: 165px;
+  height: 55px;
+  background-color: rgb(249, 249, 249);
+  border: 1px rgb(214, 214, 214) solid;
+  cursor: pointer;
+  position: absolute;
+  top: 6px;
+  left: 6px;
+  z-index: 0;
+}
 main .container_main .range .wedding {
   max-width: 171px;
   width: 100%;
   padding: 0;
   margin: 0;
   min-height: 61px;
+  position: relative;
 }
 main .container_main .range .wedding button {
   width: 165px;
@@ -290,36 +374,49 @@ main .container_main .range .wedding button {
   text-align: center;
   letter-spacing: 1px;
   text-transform: uppercase;
-  background-color: transparent;
+  background-color: rgb(249, 249, 249);
   border: 1px rgb(214, 214, 214) solid;
   cursor: pointer;
-  position: relative;
-  z-index: 2;
+  position: absolute;
+  top: 6px;
+  left: 6px;
+  z-index: 0;
 }
-main .container_main .range .wedding button:hover {
+main .container_main .range .wedding button:after {
+  content: "Кольца";
+  font-family: "Gilroy-Light";
+  font-size: 18px;
+  font-weight: 500;
+  text-align: center;
+  vertical-align: middle;
+  letter-spacing: 1px;
+  line-height: 50px;
+  text-transform: uppercase;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border: 1px rgb(214, 214, 214) solid;
+  background-color: rgb(249, 249, 249);
+  top: -6px;
+  left: -6px;
+  z-index: 1;
+}
+main .container_main .range .wedding button:hover::after {
+  content: "Кольца";
+  font-family: "Gilroy-Light";
+  font-size: 18px;
+  font-weight: 500;
+  text-align: center;
+  vertical-align: middle;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  position: relative;
+  top: -6px;
+  left: -6px;
   width: 171px;
   height: 61px;
   background-color: rgb(51, 51, 51);
   color: white;
-}
-main .container_main .range .wedding button:after {
-  content: "";
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  border: 1px rgb(214, 214, 214) solid;
-  top: 6px;
-  left: 6px;
-  z-index: 1;
-}
-main .container_main .range .wedding button:hover::after {
-  content: "";
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  border: 1px rgb(214, 214, 214) solid;
-  top: 0px;
-  left: 0px;
 }
 main .container_main .catalog {
   max-width: 1110px;
@@ -455,10 +552,11 @@ main .salon {
 main .salon .salon_container {
   max-width: 1110px;
   width: 100%;
-  padding: 100px 5px 0 5px;
+  padding: 0 5px;
   margin: 0 auto;
 }
 main .salon .salon_container .question {
+  padding-top: 100px;
   font-family: "Gilroy-Light";
   font-size: 21px;
   font-weight: 400;
@@ -509,10 +607,11 @@ main .salon .salon_container button {
 main .container_main_middle {
   max-width: 1110px;
   width: 100%;
-  padding: 120px 5px 0 5px;
+  padding: 0 5px;
   margin: 0 auto;
 }
 main .container_main_middle .useful_articles {
+  padding-top: 120px;
   font-family: "Gilroy-Light";
   color: rgb(51, 51, 51);
   font-size: 21px;
@@ -717,10 +816,11 @@ main .personal_suggestions {
 main .personal_suggestions .container_personal {
   max-width: 1110px;
   width: 100%;
-  padding: 100px 5px 0 5px;
+  padding: 0 5px;
   margin: 0 auto;
 }
 main .personal_suggestions .container_personal .personal {
+  padding-top: 100px;
   font-family: "Gilroy-Light";
   font-size: 21px;
   font-weight: 400;
@@ -849,6 +949,14 @@ main .personal_suggestions .container_personal .you_email .email .email_fon :foc
 main .personal_suggestions .container_personal .you_email .email .email_fon input:focus {
   outline: none;
 }
+@media (max-width: 460px) {
+  main .personal_suggestions .container_personal .you_email .email .email_fon label {
+    max-width: 145px;
+    width: 100%;
+    padding: 0 0 0 10px;
+    margin: 0;
+  }
+}
 main .personal_suggestions .container_personal .you_email .email .email_fon label button {
   max-width: 164px;
   width: 100%;
@@ -857,12 +965,13 @@ main .personal_suggestions .container_personal .you_email .email .email_fon labe
   min-height: 45px;
   margin-left: 9px;
   background-color: rgb(51, 51, 51);
+  color: white;
   letter-spacing: 1px;
   text-transform: uppercase;
 }
 @media (max-width: 460px) {
   main .personal_suggestions .container_personal .you_email .email .email_fon label button {
-    max-width: 130px;
+    margin-left: 0;
   }
 }
 
@@ -900,6 +1009,22 @@ footer .container-footer .links p {
   color: rgb(51, 51, 51);
   margin-bottom: 9px;
 }
+footer .container-footer .links hr {
+  color: rgb(51, 51, 51);
+}
+footer .container-footer .links .links_contents {
+  max-width: 255px;
+  width: 100%;
+  padding: 31px 0 0 0;
+  margin: 0;
+  min-height: 160px;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: repeat(4, 1fr);
+}
+footer .container-footer .links .links_contents a {
+  text-decoration: none;
+}
 footer .container-footer .payment {
   max-width: 255px;
   width: 100%;
@@ -909,6 +1034,29 @@ footer .container-footer .payment {
 footer .container-footer .payment p {
   color: rgb(51, 51, 51);
   margin-bottom: 9px;
+}
+footer .container-footer .payment hr {
+  color: rgb(51, 51, 51);
+}
+footer .container-footer .payment .links_contents {
+  max-width: 255px;
+  width: 100%;
+  padding: 31px 0 0 0;
+  margin: 0;
+  min-height: 160px;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: repeat(2, 1fr);
+}
+footer .container-footer .payment .links_contents .links_text {
+  text-transform: none;
+  margin-bottom: 0;
+}
+footer .container-footer .payment div img {
+  max-width: 55px;
+  width: 100%;
+  padding: 21px 20px 0 0;
+  margin: 0;
 }
 footer .container-footer .contacts {
   max-width: 255px;
@@ -926,6 +1074,37 @@ footer .container-footer .contacts p {
   color: rgb(51, 51, 51);
   margin-bottom: 9px;
 }
+footer .container-footer .contacts hr {
+  color: rgb(51, 51, 51);
+}
+footer .container-footer .contacts .contacts_box {
+  max-width: 255px;
+  width: 100%;
+  padding: 31px 0 0 0;
+  margin: 0;
+  min-height: 130px;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: repeat(3, 1fr);
+}
+footer .container-footer .contacts .contacts_box .contacts_phone {
+  text-decoration: none;
+}
+footer .container-footer .contacts .contacts_box .contacts_phone::before {
+  content: url("../img/phone.png");
+  position: relative;
+  top: 4px;
+  margin-right: 21px;
+}
+footer .container-footer .contacts .contacts_box .contacts_mail {
+  text-decoration: none;
+}
+footer .container-footer .contacts .contacts_box .contacts_mail::before {
+  content: url("../img/entypo_mail.png");
+  position: relative;
+  top: 4px;
+  margin-right: 21px;
+}
 footer .container-footer .social_media {
   max-width: 355px;
   width: 100%;
@@ -936,8 +1115,38 @@ footer .container-footer .social_media p {
   color: rgb(51, 51, 51);
   margin-bottom: 9px;
 }
+footer .container-footer .social_media hr {
+  color: rgb(51, 51, 51);
+}
+footer .container-footer .social_media .links_contents {
+  max-width: 255px;
+  width: 100%;
+  padding: 31px 0 0 0;
+  margin: 0;
+  min-height: 160px;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: repeat(2, 1fr);
+}
+footer .container-footer .social_media .links_contents .links_text {
+  text-transform: none;
+  margin-bottom: 0;
+}
+footer .container-footer .social_media div {
+  display: grid;
+  grid-template-columns: repeat(5, 27px);
+  grid-template-rows: 24px;
+  justify-content: space-between;
+  align-items: center;
+}
+footer .container-footer .social_media div img {
+  max-width: 24px;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+}
 footer .container-footer .information {
-  max-width: 1000px;
+  max-width: 1100px;
   width: 100%;
   padding: 0;
   margin: 0;
@@ -955,4 +1164,55 @@ footer .container-footer .information {
     grid-column-start: 1;
     grid-column-end: 2;
   }
+}
+footer .container-footer .information .information_box {
+  padding-top: 21px;
+  display: grid;
+  grid-template-columns: 145px 195px 95px 140px;
+  grid-template-rows: 23px;
+  justify-content: space-between;
+}
+@media (max-width: 600px) {
+  footer .container-footer .information .information_box {
+    grid-template-columns: 145px 195px;
+    grid-template-rows: 23px 23px;
+    row-gap: 10px;
+    justify-content: space-around;
+  }
+}
+@media (max-width: 525px) {
+  footer .container-footer .information .information_box {
+    grid-template-columns: 195px;
+    grid-template-rows: repeat(4, 23px);
+    row-gap: 5px;
+    justify-content: space-around;
+  }
+}
+footer .container-footer .information .information_box .jewelry_footer {
+  max-width: 145px;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  margin-bottom: 0;
+}
+footer .container-footer .information .information_box .contract_footer {
+  max-width: 195px;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  margin-bottom: 0;
+}
+footer .container-footer .information .information_box .contragent {
+  max-width: 95px;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  margin-bottom: 0;
+}
+footer .container-footer .information .information_box .figma_info {
+  max-width: 140px;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  margin-bottom: 0;
 }/*# sourceMappingURL=style.css.map */

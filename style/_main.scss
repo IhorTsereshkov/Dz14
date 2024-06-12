@@ -1,8 +1,8 @@
 main {
   .container_main {
-    @include container_box(1110px, 100%, 100px 5px 0 5px, 0 auto);
+    @include container_box(1110px, 100%, 0 5px, 0 auto);
     .event {
-      @include container_box(350px, 100%, 0, 0 auto);
+      @include container_box(350px, 100%, 100px 0 0 0, 0 auto);
       font-family: $font_gilroy;
       font-size: 21px;
       font-weight: 400;
@@ -32,9 +32,65 @@ main {
         grid-template-rows: repeat(3, 80px);
         justify-content: space-evenly;
       }
+      .box_1 {
+        @include container_box(171px, 100%, 0, 0);
+        min-height: 61px;
+        position: relative;
+        .box_2 {
+          width: 165px;
+          height: 55px;
+          font-family: $font_gilroy;
+          font-size: 18px;
+          font-weight: 500;
+          text-align: center;
+          letter-spacing: 1px;
+          text-transform: uppercase;
+          background-color: rgba(249, 249, 249, 1);
+          border: 1px $color_grey solid;
+          cursor: pointer;
+          position: absolute;
+          top: 0px;
+          left: 0px;
+          z-index: 1;
+          a {
+            display: block;
+            font-family: $font_gilroy;
+            font-size: 18px;
+            font-weight: 500;
+            text-align: center;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            text-decoration: none;
+            color: $color_black51;
+            width: 165px;
+            height: 55px;
+            padding-top: 17px;
+          }
+          a:hover {
+            color: $color_white;
+          }
+        }
+        .box_2:hover {
+          width: 171px;
+          height: 61px;
+          background-color: rgb(51, 51, 51);
+        }
+        .box_3 {
+          width: 165px;
+          height: 55px;
+          background-color: rgba(249, 249, 249, 1);
+          border: 1px $color_grey solid;
+          cursor: pointer;
+          position: absolute;
+          top: 6px;
+          left: 6px;
+          z-index: 0;
+        }
+      }
       .wedding {
         @include container_box(171px, 100%, 0, 0);
         min-height: 61px;
+        position: relative;
         button {
           width: 165px;
           height: 55px;
@@ -44,36 +100,55 @@ main {
           text-align: center;
           letter-spacing: 1px;
           text-transform: uppercase;
-          background-color: transparent;
+          background-color: rgba(249, 249, 249, 1);
           border: 1px $color_grey solid;
           cursor: pointer;
-          position: relative;
-          z-index: 2;
+          position: absolute;
+          top: 6px;
+          left: 6px;
+          z-index: 0;
         }
-        button:hover {
+        // button:hover {
+        //   width: 171px;
+        //   height: 61px;
+        //   background-color: rgb(51, 51, 51);
+        //   color: $color_white;
+        // }
+        button:after {
+          content: "Кольца";
+          font-family: $font_gilroy;
+          font-size: 18px;
+          font-weight: 500;
+          text-align: center;
+          vertical-align: middle;
+          letter-spacing: 1px;
+          line-height: 50px;
+          text-transform: uppercase;
+          position: absolute;
+          width: 100%;
+          height: 100%;
+          border: 1px $color_grey solid;
+          background-color: rgba(249, 249, 249, 1);
+          top: -6px;
+          left: -6px;
+          z-index: 1;
+        }
+        button:hover::after {
+          content: "Кольца";
+          font-family: $font_gilroy;
+          font-size: 18px;
+          font-weight: 500;
+          text-align: center;
+          vertical-align: middle;
+          letter-spacing: 1px;
+          text-transform: uppercase;
+          position: relative;
+          top: -6px;
+          left: -6px;
           width: 171px;
           height: 61px;
           background-color: rgb(51, 51, 51);
           color: $color_white;
-        }
-        button:after {
-          content: "";
-          position: absolute;
-          width: 100%;
-          height: 100%;
-          border: 1px $color_grey solid;
-          top: 6px;
-          left: 6px;
-          z-index: 1;
-        }
-        button:hover::after {
-          content: "";
-          position: absolute;
-          width: 100%;
-          height: 100%;
-          border: 1px $color_grey solid;
-          top: 0px;
-          left: 0px;
         }
       }
     }
@@ -176,8 +251,9 @@ main {
       min-height: 630px;
     }
     .salon_container {
-      @include container_box(1110px, 100%, 100px 5px 0 5px, 0 auto);
+      @include container_box(1110px, 100%, 0 5px, 0 auto);
       .question {
+        padding-top: 100px;
         font-family: $font_gilroy;
         font-size: 21px;
         font-weight: 400;
@@ -219,8 +295,9 @@ main {
     }
   }
   .container_main_middle {
-    @include container_box(1110px, 100%, 120px 5px 0 5px, 0 auto);
+    @include container_box(1110px, 100%, 0 5px, 0 auto);
     .useful_articles {
+      padding-top: 120px;
       @include text_box($font_gilroy, $color_black51, 21px, 400, 0);
       text-align: center;
       margin-bottom: 14px;
@@ -387,8 +464,9 @@ main {
     background-color: $color_black51;
     min-height: 478px;
     .container_personal {
-      @include container_box(1110px, 100%, 100px 5px 0 5px, 0 auto);
+      @include container_box(1110px, 100%, 0 5px, 0 auto);
       .personal {
+        padding-top: 100px;
         font-family: $font_gilroy;
         font-size: 21px;
         font-weight: 400;
@@ -480,16 +558,20 @@ main {
               outline: none;
             }
             label {
+              @media (max-width: 460px) {
+                @include container_box(145px, 100%, 0 0 0 10px, 0);
+              }
               button {
                 @include container_box(164px, 100%, 0, 0);
                 min-height: 45px;
                 margin-left: 9px;
                 background-color: $color_black51;
                 @extend %nav_text;
+                color: $color_white;
                 letter-spacing: 1px;
                 text-transform: uppercase;
                 @media (max-width: 460px) {
-                  max-width: 130px;
+                  margin-left: 0;
                 }
               }
             }
